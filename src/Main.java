@@ -1,4 +1,9 @@
 public class Main {
+
+    //Polymorphism kullanımı örneği
+    public static void maasiGoster (Personel personel){
+        System.out.println(personel.getMaas());
+    }
     public static void main(String[] args) {
 
         Mudur mudur = new Mudur(1, "Mehmet","HAN",30000, 2);
@@ -28,8 +33,9 @@ public class Main {
         System.out.println();
         teknikSube.subedekiPersonelleriListele();
         System.out.println();
-        teknikSube.personelAra(8);
+        teknikSube.personelAra(5);
 
+        maasiGoster(muhendis2);
 
     }
 }
