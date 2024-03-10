@@ -4,6 +4,15 @@ public class Main {
     public static void maasiGoster (Personel personel){
         System.out.println(personel.getMaas());
     }
+
+    public static void yoneticiMi(Personel personel){
+        if (personel instanceof Mudur){
+            System.out.println(personel.getAd() + " bir yöneticidir !");
+        }
+        else {
+            System.out.println(personel.getAd() + " bir yönetici değildir !");
+        }
+    }
     public static void main(String[] args) {
 
         Mudur mudur = new Mudur(1, "Mehmet","HAN",30000, 2);
@@ -36,6 +45,9 @@ public class Main {
         teknikSube.personelAra(5);
 
         maasiGoster(muhendis2);
+        System.out.println("*********");
+
+        yoneticiMi(sekreter);
 
     }
 }
